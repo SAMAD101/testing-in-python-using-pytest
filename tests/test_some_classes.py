@@ -22,6 +22,12 @@ class TestAnimal:
 
 
 class TestCat:
+    def setup_method(self, method):
+        print(f"Setting up {method}")
+
+    def teardown_method(self, method):
+        print(f"Tearing down {method}")
+
     def test_init(self):
         cat = Cat("Cat", "Felis catus", "Felidae")
         assert cat.name == "Cat"
