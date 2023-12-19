@@ -25,3 +25,7 @@ def test_add_slow():
 @pytest.mark.skip(reason="Not implemented yet")
 def test_add():
     assert some_functions.add(1, 2) == 3
+
+@pytest.mark.xfail(reason="Can't divide by zero")
+def test_divide_by_zero():
+    assert some_functions.divide(1, 0) == 0
