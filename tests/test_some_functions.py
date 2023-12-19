@@ -19,5 +19,9 @@ def test_add_strings():
 
 @pytest.mark.slow
 def test_add_slow():
-    time.sleep(5)
+    time.sleep(1)
+    assert some_functions.add(1, 2) == 3
+
+@pytest.mark.skip(reason="Not implemented yet")
+def test_add():
     assert some_functions.add(1, 2) == 3
