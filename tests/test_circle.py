@@ -12,8 +12,9 @@ def test_area(radius, expected):
     assert Circle(radius).area() == expected
 
 
-def test_circumference(circle):
-    assert circle.circumference() == 18.84
+@pytest.mark.parametrize("radius, expected", [(1, 6.28), (2, 12.56), (3, 18.84)])
+def test_circumference(radius, expected):
+    assert Circle(radius).circumference() == expected
 
 
 def test_repr(circle):

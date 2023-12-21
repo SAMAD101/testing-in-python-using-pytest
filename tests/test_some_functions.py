@@ -27,7 +27,7 @@ def test_add_slow():
     assert some_functions.add(1, 2) == 3
 
 
-@pytest.mark.skip(reason="Not implemented yet")
+@pytest.mark.skip(reason="This will be skipped")
 def test_add():
     assert some_functions.add(1, 2) == 3
 
